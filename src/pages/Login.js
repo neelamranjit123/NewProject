@@ -16,13 +16,16 @@ const Login = () => {
     //console.log('Password:', password);
     //console.log('Logging in with:', email, password);
 
-    try {``
+    try {
       // await auth.signInWithEmailAndPassword(email, password);
       await signInWithEmailAndPassword(auth, email, password );
+      
       console.log('Login successful');
       navigate('/homepage');
     } catch (error) {
       console.error('Login error:', error.message);
+      window.alert('Login failed. Please check your email and password.');
+      
     }
   };
 
