@@ -16,7 +16,7 @@ const Login = () => {
     //console.log('Password:', password);
     //console.log('Logging in with:', email, password);
 
-    try {
+    try {``
       // await auth.signInWithEmailAndPassword(email, password);
       await signInWithEmailAndPassword(auth, email, password );
       console.log('Login successful');
