@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { auth } from "../firebase/firebase";
 import 'tailwindcss/tailwind.css';
-
 import { signInWithEmailAndPassword } from "firebase/auth";
 
 
@@ -19,19 +18,16 @@ const Login = () => {
     try {
       // await auth.signInWithEmailAndPassword(email, password);
       await signInWithEmailAndPassword(auth, email, password );
-      
       console.log('Login successful');
       navigate('/homepage');
     } catch (error) {
       console.error('Login error:', error.message);
-      window.alert('Login failed. Please check your email and password.');
-      
     }
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-5 bg-black rounded shadow-md">
-      <h2 className="text-2xl font-semibold mb-4">Login</h2>
+    <div className="max-w-md mx-auto mt-10 p-5 bg-black rounded shadow-md flex flex-col items-center">
+      <h2 className="text-2xl font-semibold text-white mb-4">Login</h2>
       <label className="block mb-1">Email:</label>
       <input
         type="email"
@@ -46,11 +42,20 @@ const Login = () => {
         onChange={(e) => setPassword(e.target.value)}
         className="w-full p-2 mb-4 border rounded"
       />
-      <button onClick={handleLogin} className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600">
+      <Link to="/homepage">
+      <button onClick={handleLogin} className="bg-blue-900 py-2 px-4 rounded shadow text-white cursor-pointer">
         Login
       </button>
+      </Link>
+      <br/>
+      <Link to="/">
+      <button className="bg-blue-900 py-2 px-4 rounded shadow text-white cursor-pointer">
+          Go Back
+      </button>
+      </Link>
     </div>
   );
 };
 
 export default Login;
+

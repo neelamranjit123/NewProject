@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { auth } from "../firebase/firebase";
 import 'tailwindcss/tailwind.css';
+import { createUserWithEmailAndPassword } from "firebase/auth";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -10,8 +11,9 @@ const Register = () => {
 
   const handleRegister = async () => {
     try {
-      await auth.createUserWithEmailAndPassword(email, password);
-      navigate.push('/');
+      await createUserWithEmailAndPassword(auth, email, password);
+      console.log('Registration Successful');
+      navigate('/login');
     } catch (error) {
       console.error('Registration error:', error.message);
     }

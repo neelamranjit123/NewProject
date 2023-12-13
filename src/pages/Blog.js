@@ -3,7 +3,8 @@ import {client} from "../lib/client";
 import {format} from "date-fns";
 import { Link } from 'react-router-dom';
 import 'tailwindcss/tailwind.css';
-
+import Header1 from "../components/Header1";
+import Footer from '../components/Footer';
 
 export default function Blog() {
   const [stories, setStories] = useState([]);
@@ -33,6 +34,7 @@ export default function Blog() {
 
   return (
     <>
+    <Header1 />
     <div className="max-w-7xl px-5 mx-auto mt-20 mb-10">
       <h1 className="text-4xl lg:text-5xl mb-6 text-black">All Blog Posts</h1>
     </div>
@@ -68,6 +70,7 @@ export default function Blog() {
           Back to Homepage
         </Link>
       </div>
+      <Footer />
     </>
   )
 }

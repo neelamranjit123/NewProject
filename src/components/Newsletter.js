@@ -9,20 +9,23 @@ export default function Newsletter() {
         md:place-items-center">
           <article>
             <h2 className="text-white text-3xl lg:text-4xl mb-4">
-              Sign up to the newsletter</h2>
+              Needs to be something else.</h2>
             <p>
-              Receive the latest updates.</p>
+              Receive updates.</p>
           </article>
           <article>
             <form>
-              <input type="email"
+              {/* <input type="email"
                 name="email"
                 id="email"
                 placeholder="example@email.com"
                 required
                 className="w-full py-2 px-4 rounded shadow mb-4 bg-transparent border border-slate-200 placeholder-slate-300 text-slate-300 tracking-wide"
-              />
-              <button type="submit" className="bg-white py-2 px-8 rounded shadow text-slate-800 tracking-wide hover:opacity-75 transition-allduration-200 w-full md:w-auto">Subscribe</button>
+              /> */}
+              <button type="submit" className="bg-white py-2 px-8 rounded shadow text-slate-800 tracking-wide hover:opacity-75 
+              transition-allduration-200 w-full md:w-auto">
+                Get Information
+              </button>
               {/* Buttondown, Convertkit*/}
             </form>
           </article>

@@ -5,6 +5,8 @@ import {format} from "date-fns";
 import {PortableText} from "@portabletext/react";
 import Profile from "../components/Profile";
 import 'tailwindcss/tailwind.css';
+import Header1 from "../components/Header1";
+import Footer from '../components/Footer';
 
 export default function Blogpost() {
   const [blogpost, setBlogpost] = useState([]);
@@ -40,6 +42,7 @@ export default function Blogpost() {
 
   return (
   <>
+  <Header1 />
     {blogpost && (
       <section className="py-20 px-5 max-w-3xl mx-auto">
         {blogpost.mainImage && (
@@ -76,6 +79,7 @@ export default function Blogpost() {
         </div>       
 
         <Profile/>
+        <Footer />
         
       </section>
     )}    

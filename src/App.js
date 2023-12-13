@@ -9,6 +9,8 @@ import Login from "./pages/Login";
 import Logout from "./pages/Logout";
 import ScrollToTop from "./components/ScrollToTop";
 import Landingpage from "./pages/Landingpage";
+import Register from "./pages/Register";
+
 
 export default function App() {
   return (
@@ -19,6 +21,7 @@ export default function App() {
       
       <Route path="/" element={<Landingpage />}></Route>
       <Route path="/login" element={<Login />}></Route>
+      <Route path="/register" element={<Register />}></Route>
       <Route path="/homepage" element={<Homepage />}></Route>
       <Route path="/logout" element={<Logout />}></Route>
       <Route path="/blog" element={<Blog />}></Route>

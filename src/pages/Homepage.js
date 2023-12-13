@@ -6,7 +6,7 @@ import {client} from "../lib/client";
 import {format} from "date-fns";
 import { Link } from 'react-router-dom';
 import 'tailwindcss/tailwind.css';
-import Logout from './Logout';
+import Header1 from "../components/Header1";
 
 
 export default function Homepage() {
@@ -35,8 +35,11 @@ export default function Homepage() {
     .catch(console.error);
   }, [])
 
+  
+
   return (
-    <>      
+    <>
+      <Header1 />
       {stories[0] && ( 
       <Link to={`/blog/${stories[0].slug.current}`}>
         <section className="max-w-7xl mx-auto my-20 px-5">
@@ -104,7 +107,7 @@ export default function Homepage() {
       <Newsletter />
       <Profile />
       <Footer />
-      <Logout />
+      
     
       
     </>

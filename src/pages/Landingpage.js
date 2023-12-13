@@ -6,8 +6,11 @@ import {client} from "../lib/client";
 import {format} from "date-fns";
 import { Link } from 'react-router-dom';
 import 'tailwindcss/tailwind.css';
+import Header from "../components/Header";
+import Logout from '../pages/Logout';
 
 // import Login from './Login';
+
 
 export default function Homepage() {
   const [stories, setStories] = useState([]);
@@ -37,11 +40,13 @@ export default function Homepage() {
 
   return (
     <>
-      <Link to="/login">
+      {/* <Link to="/login">
         <div className="absolute top-4 right-4 bg-blue-500 py-2 px-4 rounded shadow text-white cursor-pointer">
           Log In
         </div>
-      </Link>
+      </Link> */}
+      <Header />
+      
       {stories[0] && ( 
       <Link >
         <section className="max-w-7xl mx-auto my-20 px-5">
@@ -109,9 +114,7 @@ export default function Homepage() {
       <Newsletter />
       <Profile />
       <Footer />
-      
-    
-      
+          
     </>
   )
   
