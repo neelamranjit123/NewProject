@@ -10,6 +10,8 @@ import Logout from "./pages/Logout";
 import ScrollToTop from "./components/ScrollToTop";
 import Landingpage from "./pages/Landingpage";
 import Register from "./pages/Register";
+import CurdComponent from './pages/CurdComponent';
+
 
 
 export default function App() {
@@ -23,6 +25,7 @@ export default function App() {
       <Route path="/login" element={<Login />}></Route>
       <Route path="/register" element={<Register />}></Route>
       <Route path="/homepage" element={<Homepage />}></Route>
+      <Route path="/curdcomponent" element={<CurdComponent />}></Route>
       <Route path="/logout" element={<Logout />}></Route>
       <Route path="/blog" element={<Blog />}></Route>
       <Route path="/blog/:slug" element={<Blogpost />}></Route>
